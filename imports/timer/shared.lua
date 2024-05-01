@@ -10,10 +10,11 @@
 ---@class OxTimer : OxClass
 ---@field private private TimerPrivateProps
 ---@field start fun(self: self, async?: boolean) starts the timer
----@field forceEnd fun(self: self, triggerOnEnd: boolean) end timer early and optionally trigger the onEnd function still
----@field isPaused fun(self: self): boolean returns wether the timer is paused or not
 ---@field pause fun(self: self) pauses the timer until play method is called
 ---@field play fun(self: self) resumes the timer if paused
+---@field restart fun(self: self, async?: boolean) Resets and starts the timer.
+---@field forceEnd fun(self: self, triggerOnEnd: boolean) end timer early and optionally trigger the onEnd function still
+---@field isPaused fun(self: self): boolean returns wether the timer is paused or not
 ---@field getTimeLeft fun(self: self, format?: 'ms' | 's' | 'm' | 'h'): number | table returns the time left on the timer with the specified format rounded to 2 decimal places (miliseconds, seconds, minutes, hours). returns a table of all if not specified.
 local timer = lib.class('OxTimer')
 
